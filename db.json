@@ -13,11 +13,13 @@
    "ingredients": [
      {
        "id": 1,
-       "name": "Salt"
+       "name": "Salt",
+       "category": "Spices"
      },
      {
        "id": 2,
-       "name": "Pepper"
+       "name": "Pepper",
+       "category": "Spices"
      }
    ]
  }
