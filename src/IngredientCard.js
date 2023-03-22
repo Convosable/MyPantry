@@ -1,8 +1,9 @@
 import React from 'react';
 
 function IngredientCard({ingredient}) {
+
     return (
-        <div>
+        <div className='ingredientcard'>
             <h2>Name: {ingredient.name}</h2>
             <h3>Category: {ingredient.category}</h3>
         </div>

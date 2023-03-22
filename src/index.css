@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ingredientcard{
+  border-style: solid;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: .5rem
+}
+
+.ingredientcontainer {
+  margin-left: 1rem;
+  margin-right: .5rem;
+  border-style: solid;
+  float: left;
+  width: 46%;
+  padding: 10px;
+}
+
+.myingredientcontainer {
+  margin-right: 1rem;
+  margin-left: .5rem;
+  border-style: solid;
+  float: right;
+  width: 46%;
+  padding: 10px;
+}

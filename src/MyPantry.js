@@ -6,16 +6,19 @@ function MyPantry({ingredientList}) {
     return (
         <div>
             <h1>My Pantry</h1>
-            <div>
+            <div className = "ingredientcontainer">
                 <h2>Ingredients</h2>
                 <input type="text" placeholder="search for ingredient"></input>
-                {ingredientList.map((ingredient) => 
-                <IngredientCard ingredient = {ingredient} key = {ingredient.name}/>
-                )}
+                    {ingredientList.map((ingredient) => 
+                    <IngredientCard ingredient = {ingredient} key = {ingredient.name}/>
+                    )}
             </div>
-            <div>
+            <div className = "myingredientcontainer">
                 <h2>My Ingredients</h2>
                 <input type="text" placeholder="search for ingredient"></input>
+                <div>
+                    my ingredients
+                </div>
             </div>
 
         </div>
