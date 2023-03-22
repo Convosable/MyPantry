@@ -2,24 +2,22 @@ import React from "react";
 
 function MyPantry({ingredientList}) {
     
-    console.log(ingredientList);
-
     return (
         <div>
             <h1>My Pantry</h1>
             <div>
-                <h2>Ingrediants</h2>
+                <h2>Ingredients</h2>
+                <input type="text" placeholder="search for ingredient"></input>
                 {ingredientList.map((ingredient) => 
                 <div key = {ingredient.name}>
                     <h2>Name: {ingredient.name}</h2>
                     <h3>Category: {ingredient.category}</h3>
                 </div>
                 )}
-                <p>Search by name:</p>
-                
             </div>
             <div>
-                <h2>My Ingrediants</h2>
+                <h2>My Ingredients</h2>
+                <input type="text" placeholder="search for ingredient"></input>
             </div>
 
         </div>
@@ -30,3 +28,8 @@ export default MyPantry;
 
 
 //create an Ingredient Card component for styling purposes
+
+// add a 'add to myIngredients' button, when active, places the ingredient into the myIngredients list
+// add a search bar input for both ingredients and my ingredients list 
+    //add state for search by for ingredients and myingredients
+            //  if input value === searchBy => filter ingredient list to show (search to startwith begining of any word) no submit button
