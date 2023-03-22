@@ -1,4 +1,5 @@
 import React from "react";
+import IngredientCard from "./IngredientCard";
 
 function MyPantry({ingredientList}) {
     
@@ -9,10 +10,7 @@ function MyPantry({ingredientList}) {
                 <h2>Ingredients</h2>
                 <input type="text" placeholder="search for ingredient"></input>
                 {ingredientList.map((ingredient) => 
-                <div key = {ingredient.name}>
-                    <h2>Name: {ingredient.name}</h2>
-                    <h3>Category: {ingredient.category}</h3>
-                </div>
+                <IngredientCard ingredient = {ingredient} key = {ingredient.name}/>
                 )}
             </div>
             <div>

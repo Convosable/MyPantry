@@ -1,8 +1,11 @@
 import React from 'react';
 
-function IngredientCard() {
+function IngredientCard({ingredient}) {
     return (
-        <div>sup</div>
+        <div>
+            <h2>Name: {ingredient.name}</h2>
+            <h3>Category: {ingredient.category}</h3>
+        </div>
     )
 }
 
