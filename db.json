@@ -32,6 +32,611 @@
       "name": "Banana",
       "category": "Fruit",
       "id": 4
+    },
+    {
+      "name": "Orange",
+      "category": "Fruit",
+      "id": 5
+    },
+    {
+      "name": "Mango",
+      "category": "Fruit",
+      "id": 6
+    },
+    {
+      "name": "Pineapple",
+      "category": "Fruit",
+      "id": 7
+    },
+    {
+      "name": "Grapefruit",
+      "category": "Fruit",
+      "id": 8
+    },
+    {
+      "name": "Papaya",
+      "category": "Fruit",
+      "id": 9
+    },
+    {
+      "name": "Apricot",
+      "category": "Fruit",
+      "id": 10
+    },
+    {
+      "name": "Cherry",
+      "category": "Fruit",
+      "id": 11
+    },
+    {
+      "name": "Lemon",
+      "category": "Fruit",
+      "id": 12
+    },
+    {
+      "name": "Lime",
+      "category": "Fruit",
+      "id": 13
+    },
+    {
+      "name": "Watermelon",
+      "category": "Fruit",
+      "id": 14
+    },
+    {
+      "name": "Avocado",
+      "category": "Fruit",
+      "id": 15
+    },
+    {
+      "name": "Peach",
+      "category": "Fruit",
+      "id": 16
+    },
+    {
+      "name": "Strawberry",
+      "category": "Fruit",
+      "id": 17
+    },
+    {
+      "name": "Pomegranate",
+      "category": "Fruit",
+      "id": 18
+    },
+    {
+      "name": "Plum",
+      "category": "Fruit",
+      "id": 19
+    },
+    {
+      "name": "Grape",
+      "category": "Fruit",
+      "id": 20
+    },
+    {
+      "name": "Kiwi",
+      "category": "Fruit",
+      "id": 21
+    },
+    {
+      "name": "Pear",
+      "category": "Fruit",
+      "id": 22
+    },
+    {
+      "name": "Blueberry",
+      "category": "Fruit",
+      "id": 23
+    },
+    {
+      "name": "Blackberry",
+      "category": "Fruit",
+      "id": 24
+    },
+    {
+      "name": "Tangerine",
+      "category": "Fruit",
+      "id": 25
+    },
+    {
+      "name": "Cauliflower",
+      "category": "Vegetable",
+      "id": 26
+    },
+    {
+      "name": "Broccoli",
+      "category": "Vegetable",
+      "id": 27
+    },
+    {
+      "name": "Cabbage",
+      "category": "Vegetable",
+      "id": 28
+    },
+    {
+      "name": "Asparagus",
+      "category": "Vegetable",
+      "id": 29
+    },
+    {
+      "name": "Carrot",
+      "category": "Vegetable",
+      "id": 30
+    },
+    {
+      "name": "Onion",
+      "category": "Vegetable",
+      "id": 31
+    },
+    {
+      "name": "Spinach",
+      "category": "Vegetable",
+      "id": 33
+    },
+    {
+      "name": "Kale",
+      "category": "Vegetable",
+      "id": 34
+    },
+    {
+      "name": "Arugula",
+      "category": "Vegetable",
+      "id": 35
+    },
+    {
+      "name": "Tomatoe",
+      "category": "Vegetable",
+      "id": 36
+    },
+    {
+      "name": "Garlic",
+      "category": "Vegetable",
+      "id": 37
+    },
+    {
+      "name": "Cucumber",
+      "category": "Vegetable",
+      "id": 38
+    },
+    {
+      "name": "Zucchini",
+      "category": "Vegetable",
+      "id": 39
+    },
+    {
+      "name": "Sweet Potatoe",
+      "category": "Vegetable",
+      "id": 40
+    },
+    {
+      "name": "Artichoke",
+      "category": "Vegetable",
+      "id": 41
+    },
+    {
+      "name": "Beet",
+      "category": "Vegetable",
+      "id": 42
+    },
+    {
+      "name": "Potatoe",
+      "category": "Vegetable",
+      "id": 43
+    },
+    {
+      "name": "Brussels Sprouts",
+      "category": "Vegetable",
+      "id": 44
+    },
+    {
+      "name": "Chicken Breast",
+      "category": "Meat",
+      "id": 45
+    },
+    {
+      "name": "Chicken Thigh",
+      "category": "Meat",
+      "id": 46
+    },
+    {
+      "name": "Chicken Wing",
+      "category": "Meat",
+      "id": 47
+    },
+    {
+      "name": "Chicken Tenderloin",
+      "category": "Meat",
+      "id": 48
+    },
+    {
+      "name": "Chicken Drumstick",
+      "category": "Meat",
+      "id": 49
+    },
+    {
+      "name": "Beef Tenderloin",
+      "category": "Meat",
+      "id": 50
+    },
+    {
+      "name": "Beef New York Strip Steak",
+      "category": "Meat",
+      "id": 51
+    },
+    {
+      "name": "Beef Ribeye Steak",
+      "category": "Meat",
+      "id": 52
+    },
+    {
+      "name": "Beef T-bone Steak",
+      "category": "Fruit",
+      "id": 53
+    },
+    {
+      "name": "Beef Porterhouse Steak",
+      "category": "Meat",
+      "id": 54
+    },
+    {
+      "name": "Beef Short Ribs",
+      "category": "Meat",
+      "id": 55
+    },
+    {
+      "name": "Beef Brisket",
+      "category": "Meat",
+      "id": 56
+    },
+    {
+      "name": "Beef Tri Tip",
+      "category": "Meat",
+      "id": 57
+    },
+    {
+      "name": "Beef Flank Steak",
+      "category": "Meat",
+      "id": 58
+    },
+    {
+      "name": "Salmon",
+      "category": "Fish",
+      "id": 59
+    },
+    {
+      "name": "Ahi Tuna Steak",
+      "category": "Fish",
+      "id": 60
+    },
+    {
+      "name": "Canned Tuna",
+      "category": "Fish",
+      "id": 61
+    },
+    {
+      "name": "Cod",
+      "category": "Fish",
+      "id": 62
+    },
+    {
+      "name": "Swordfish",
+      "category": "Fish",
+      "id": 63
+    },
+    {
+      "name": "Dover Sole",
+      "category": "Fish",
+      "id": 64
+    },
+    {
+      "name": "Tilapia",
+      "category": "Fish",
+      "id": 65
+    },
+    {
+      "name": "Sea Bass",
+      "category": "Fish",
+      "id": 66
+    },
+    {
+      "name": "Halibut",
+      "category": "Fish",
+      "id": 67
+    },
+    {
+      "name": "Mahi-mahi",
+      "category": "Fish",
+      "id": 68
+    },
+    {
+      "name": "Trout",
+      "category": "Fish",
+      "id": 69
+    },
+    {
+      "name": "Red Snapper",
+      "category": "Fish",
+      "id": 70
+    },
+    {
+      "name": "Greek Yogurt",
+      "category": "Dairy",
+      "id": 71
+    },
+    {
+      "name": "Almond Milk",
+      "category": "Dairy",
+      "id": 72
+    },
+    {
+      "name": "Soy Milk",
+      "category": "Dairy",
+      "id": 73
+    },
+    {
+      "name": "Whole Milk",
+      "category": "Dairy",
+      "id": 74
+    },
+    {
+      "name": "2% Milk",
+      "category": "Dairy",
+      "id": 75
+    },
+    {
+      "name": "Fat Free Milk",
+      "category": "Dairy",
+      "id": 76
+    },
+    {
+      "name": "Parmesan Cheese",
+      "category": "Dairy",
+      "id": 77
+    },
+    {
+      "name": "Cheddar Cheese",
+      "category": "Dairy",
+      "id": 78
+    },
+    {
+      "name": "Provolone  Cheese",
+      "category": "Dairy",
+      "id": 79
+    },
+    {
+      "name": "Swiss Cheese",
+      "category": "Dairy",
+      "id": 80
+    },
+    {
+      "name": "Pepper-jack Cheese",
+      "category": "Dairy",
+      "id": 81
+    },
+    {
+      "name": "Cottage Cheese",
+      "category": "Dairy",
+      "id": 82
+    },
+    {
+      "name": "Sour Cream",
+      "category": "Dairy",
+      "id": 83
+    },
+    {
+      "name": "Cream Cheese",
+      "category": "Dairy",
+      "id": 84
+    },
+    {
+      "name": "Whipped Cream",
+      "category": "Dairy",
+      "id": 85
+    },
+    {
+      "name": "Salted Butter",
+      "category": "Dairy",
+      "id": 86
+    },
+    {
+      "name": "Unsalted Butter",
+      "category": "Dairy",
+      "id": 87
+    },
+    {
+      "name": "Ice Cream",
+      "category": "Dairy",
+      "id": 88
+    },
+    {
+      "name": "Quinoa",
+      "category": "Grain",
+      "id": 89
+    },
+    {
+      "name": "Jasmine Rice",
+      "category": "Grain",
+      "id": 90
+    },
+    {
+      "name": "Basmati Rice",
+      "category": "Grain",
+      "id": 91
+    },
+    {
+      "name": "Brown Rice",
+      "category": "Grain",
+      "id": 92
+    },
+    {
+      "name": "Couscous",
+      "category": "Grain",
+      "id": 93
+    },
+    {
+      "name": "Whole Wheat Bread",
+      "category": "Grain",
+      "id": 94
+    },
+    {
+      "name": "Sourdough Bread",
+      "category": "Grain",
+      "id": 95
+    },
+    {
+      "name": "Flour",
+      "category": "Grain",
+      "id": 96
+    },
+    {
+      "name": "Oatmeal",
+      "category": "Grain",
+      "id": 97
+    },
+    {
+      "name": "Chickpea",
+      "category": "Legume",
+      "id": 98
+    },
+    {
+      "name": "Lentils",
+      "category": "Legume",
+      "id": 99
+    },
+    {
+      "name": "Pinto Beans",
+      "category": "Legume",
+      "id": 100
+    },
+    {
+      "name": "Kidney Beans",
+      "category": "Legume",
+      "id": 101
+    },
+    {
+      "name": "Black Beans",
+      "category": "Legume",
+      "id": 102
+    },
+    {
+      "name": "Peas",
+      "category": "Legume",
+      "id": 103
+    },
+    {
+      "name": "Himalayan Pink Sea Salt",
+      "category": "Spice",
+      "id": 104
+    },
+    {
+      "name": "Cinnamon",
+      "category": "Spice",
+      "id": 105
+    },
+    {
+      "name": "Garlic Powder",
+      "category": "Spice",
+      "id": 106
+    },
+    {
+      "name": "Crushed Red Pepper",
+      "category": "Spice",
+      "id": 107
+    },
+    {
+      "name": "Paprika",
+      "category": "Spice",
+      "id": 108
+    },
+    {
+      "name": "Tumeric",
+      "category": "Spice",
+      "id": 109
+    },
+    {
+      "name": "Italian Seasoning",
+      "category": "Spice",
+      "id": 110
+    },
+    {
+      "name": "Everything But the Bagel Seasoning",
+      "category": "Spice",
+      "id": 111
+    },
+    {
+      "name": "Cumin",
+      "category": "Spice",
+      "id": 112
+    },
+    {
+      "name": "Chili Powder",
+      "category": "Spice",
+      "id": 113
+    },
+    {
+      "name": "Lemon Pepper",
+      "category": "Spice",
+      "id": 114
+    },
+    {
+      "name": "Onion Powder",
+      "category": "Spice",
+      "id": 115
+    },
+    {
+      "name": "Rosemary",
+      "category": "Spice",
+      "id": 116
+    },
+    {
+      "name": "Tumeric",
+      "category": "Spice",
+      "id": 117
+    },
+    {
+      "name": "Sage",
+      "category": "Spice",
+      "id": 118
+    },
+    {
+      "name": "Sunflower Seeds",
+      "category": "Nuts/Seeds",
+      "id": 119
+    },
+    {
+      "name": "Almonds",
+      "category": "Nuts/Seeds",
+      "id": 120
+    },
+    {
+      "name": "Cashews",
+      "category": "Nuts/Seeds",
+      "id": 121
+    },
+    {
+      "name": "Pistachios",
+      "category": "Nuts/Seeds",
+      "id": 122
+    },
+    {
+      "name": "Hazelnuts",
+      "category": "Nuts/Seeds",
+      "id": 123
+    },
+    {
+      "name": "Pecans",
+      "category": "Nuts/Seeds",
+      "id": 124
+    },
+    {
+      "name": "Flax Seed",
+      "category": "Nuts/Seeds",
+      "id": 125
+    },
+    {
+      "name": "Chia Seeds",
+      "category": "Nuts/Seeds",
+      "id": 126
     }
   ]
 }

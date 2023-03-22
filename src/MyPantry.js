@@ -23,6 +23,10 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
         })
         .then(r=>r.json())
         .then(newIngredient => handleAddIngredient(newIngredient))
+        setFormData({
+            name: "",
+            category: "Fruit"
+        });
     }
 
     function handleChange(e) {
@@ -52,6 +56,7 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
                             <option value="Grain">Grain</option>
                             <option value="Legume">Legume</option>
                             <option value="Spice">Spice</option>
+                            <option value="Nuts/Seeds">Nuts/Seeds</option>
                         </select>
                     </label>
                     <button type="submit">Submit</button>
@@ -70,6 +75,7 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
                             <option value="Grain">Grain</option>
                             <option value="Legume">Legume</option>
                             <option value="Spice">Spice</option>
+                            <option value="Nuts/Seeds">Nuts/Seeds</option>
                         </select>
                     </label>
                     {ingredientsList.map((ingredient) => 
