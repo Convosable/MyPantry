@@ -14,12 +14,12 @@
      {
        "id": 1,
        "name": "Salt",
-       "category": "Spices"
+       "category": "Spice"
      },
      {
        "id": 2,
        "name": "Pepper",
-       "category": "Spices"
+       "category": "Spice"
      }
    ]
  }

@@ -13,3 +13,5 @@ function IngredientCard({ingredient, ingredientIsActive, handleIngredientChange}
 }
 
 export default IngredientCard;
+
+// fix button text change for add to my ingredients => remove from my ingredients (state for ingredientIsActive)

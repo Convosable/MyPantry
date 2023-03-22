@@ -12,7 +12,7 @@ function App() {
 
   const [ingredientsList, setIngredientsList] = useState([])
   const [myIngredientsList, setMyIngredientsList] = useState([])
-  // const [ingredientIsActive, setIngredientIsActive] = useState(false);
+  const [ingredientIsActive, setIngredientIsActive] = useState(false);
 
 
   const ingredientsData = `http://localhost:3000/ingredients`
@@ -32,7 +32,6 @@ function App() {
     } else {
       setMyIngredientsList([...myIngredientsList, ingredient])
     }
-      // setIngredientIsActive(ingredientIsActive => !ingredientIsActive);
   }
 
   return (
@@ -46,7 +45,7 @@ function App() {
           <MyRecipes />
         </Route>
         <Route exact path = "/mypantry">
-          <MyPantry myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList}/>
+          <MyPantry myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} ingredientIsActive = {ingredientIsActive}/>
         </Route>
         <Route exact path = "/createrecipe">
           <CreateRecipe />
