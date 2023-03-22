@@ -1,23 +1,25 @@
 import React from "react";
 import IngredientCard from "./IngredientCard";
 
-function MyPantry({ingredientList}) {
-    
+function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange}) {
+
     return (
         <div>
             <h1>My Pantry</h1>
             <div className = "ingredientcontainer">
-                <h2>Ingredients</h2>
+                <h2>All Ingredients</h2>
                 <input type="text" placeholder="search for ingredient"></input>
-                    {ingredientList.map((ingredient) => 
-                    <IngredientCard ingredient = {ingredient} key = {ingredient.name}/>
+                    {ingredientsList.map((ingredient) => 
+                    <IngredientCard ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange}/>
                     )}
             </div>
             <div className = "myingredientcontainer">
                 <h2>My Ingredients</h2>
                 <input type="text" placeholder="search for ingredient"></input>
                 <div>
-                    my ingredients
+                    {myIngredientsList.map((ingredient) => 
+                    <IngredientCard ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange}/>
+                    )}
                 </div>
             </div>
 

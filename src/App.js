@@ -10,7 +10,10 @@ import { Route, Switch } from "react-router-dom"
 
 function App() {
 
-  const [ingredientList, setIngredientList] = useState([])
+  const [ingredientsList, setIngredientsList] = useState([])
+  const [myIngredientsList, setMyIngredientsList] = useState([])
+  // const [ingredientIsActive, setIngredientIsActive] = useState(false);
+
 
   const ingredientsData = `http://localhost:3000/ingredients`
   // const recipesData = `http://localhost:3000/recipe`
@@ -18,8 +21,19 @@ function App() {
   useEffect(() => {
     fetch(ingredientsData)
     .then(r=>r.json())
-    .then(ingredient => setIngredientList(ingredient))
+    .then(ingredient => setIngredientsList(ingredient))
   },[]);
+
+
+  function handleIngredientChange(ingredient) {
+    if (myIngredientsList.includes(ingredient)){
+      const removeIngredient = myIngredientsList.filter(i => i.id !== ingredient.id)
+      setMyIngredientsList(removeIngredient)
+    } else {
+      setMyIngredientsList([...myIngredientsList, ingredient])
+    }
+      // setIngredientIsActive(ingredientIsActive => !ingredientIsActive);
+  }
 
   return (
     <div className="App">
@@ -32,7 +46,7 @@ function App() {
           <MyRecipes />
         </Route>
         <Route exact path = "/mypantry">
-          <MyPantry ingredientList = {ingredientList}/>
+          <MyPantry myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList}/>
         </Route>
         <Route exact path = "/createrecipe">
           <CreateRecipe />
