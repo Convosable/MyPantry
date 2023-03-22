@@ -34,6 +34,10 @@ function App() {
     }
   }
 
+  function handleAddIngredient(ingredient) {
+    setIngredientsList([...ingredientsList, ingredient])
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -45,7 +49,7 @@ function App() {
           <MyRecipes />
         </Route>
         <Route exact path = "/mypantry">
-          <MyPantry myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} ingredientIsActive = {ingredientIsActive}/>
+          <MyPantry myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} ingredientIsActive = {ingredientIsActive} handleAddIngredient = {handleAddIngredient}/>
         </Route>
         <Route exact path = "/createrecipe">
           <CreateRecipe />

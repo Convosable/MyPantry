@@ -1,7 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import IngredientCard from "./IngredientCard";
 
-function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, ingredientIsActive}) {
+function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, ingredientIsActive, handleAddIngredient}) {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        category: "Fruit"
+    })
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        const ingredientData = {
+            name: formData.name,
+            category: formData.category
+        }
+        fetch(`http://localhost:3000/ingredients`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(ingredientData)
+        })
+        .then(r=>r.json())
+        .then(newIngredient => handleAddIngredient(newIngredient))
+    }
+
+    function handleChange(e) {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
 
     return (
         <div>
@@ -9,12 +38,12 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
             <div className = "ingredientcontainer">
                 <h2>All Ingredients</h2>
                 <p>Don't see the ingredient your looking for? Add your own here...</p>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>Name:
-                        <input type="text" placeholder="ingredient name"></input>
+                        <input onChange = {handleChange} type="text" placeholder="ingredient name" name = "name" value = {formData.name}></input>
                     </label>
                     <label>Category:
-                        <select name="category">
+                        <select onChange = {handleChange} name="category" value = {formData.category}>
                             <option value="Fruit">Fruit</option>
                             <option value="Vegetable">Vegetable</option>
                             <option value="Meat">Meat</option>
