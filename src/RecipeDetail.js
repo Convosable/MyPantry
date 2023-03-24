@@ -32,7 +32,9 @@ function RecipeDetail() {
                     {instructions.map((inst) => <li>{inst}</li>)}
                 </ol>
             </div>
+            <button>edit recipe</button>
         </div>
+
     )
 }
 
