@@ -14,14 +14,17 @@ code {
 
 .ingredientcard{
   border-style: solid;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-top: .5rem;
-  /* display: flex;
-  justify-content: space-between; */
+  margin: 0.5rem;
+  padding: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  column-gap: 1rem;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .ingredientcontainer {
+  border-radius: 5px;
   margin-left: 1rem;
   margin-right: .5rem;
   border-style: solid;
@@ -33,6 +36,7 @@ code {
 }
 
 .myingredientcontainer {
+  border-radius: 5px;
   margin-right: 1rem;
   margin-left: .5rem;
   border-style: solid;

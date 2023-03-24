@@ -8,6 +8,16 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
         category: "Fruit"
     })
     const [search, setSearch] = useState('')
+    const [filter, setFilter] = useState('All')
+
+    const filterByCategory = ingredientsList.filter(i => {
+        if(filter === 'All') {
+            return i
+        } else {
+            return i.category === filter}
+    })
+
+    const filterBySearch = filterByCategory.filter(i => i.name.toLowerCase().includes(search.toLowerCase()))
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -41,8 +51,14 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
         setSearch(e.target.value)
     }
 
-    const filterBySearch = ingredientsList.filter(i => i.name.toLowerCase().includes(search.toLowerCase()))
+    function handleFilter(e) {
+        setFilter(e.target.value)
+    }
 
+
+
+
+    
     return (
         <div>
             <h1>My Pantry</h1>
@@ -73,7 +89,8 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
                     <input onChange = {handleSearch} type="text" placeholder="ingredient name" value = {search}></input>
                 </label>
                 <label>Filter by Category:
-                        <select name="category">
+                        <select onChange = {handleFilter} name="category" value = {filter}>
+                            <option value="All">All</option>
                             <option value="Fruit">Fruit</option>
                             <option value="Vegetable">Vegetable</option>
                             <option value="Meat">Meat</option>
