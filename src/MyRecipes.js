@@ -3,7 +3,6 @@ import RecipeCard from "./RecipeCard";
 
 function MyRecipes({recipesList}) {
 
-    console.log(recipesList)
     return (
         <div>
             <h1>Recipes</h1>

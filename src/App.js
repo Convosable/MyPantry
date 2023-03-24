@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 import MyRecipes from './MyRecipes';
 import CreateRecipe from './CreateRecipe';
 import MyPantry from './MyPantry';
+import RecipeDetail from './RecipeDetail';
 import { Route, Switch } from "react-router-dom"
 
 
@@ -68,11 +69,14 @@ function App() {
         <Route exact path = "/">
           <Home />
         </Route>
+        <Route exact path = "/myrecipes/:id">
+          <RecipeDetail />
+        </Route>
         <Route exact path = "/myrecipes">
           <MyRecipes recipesList = {recipesList}/>
         </Route>
         <Route exact path = "/mypantry">
-          <MyPantry ingredientIsActive = {ingredientIsActive} myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} ingredientIsActive = {ingredientIsActive} handleAddIngredient = {handleAddIngredient}/>
+          <MyPantry ingredientIsActive = {ingredientIsActive} myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} handleAddIngredient = {handleAddIngredient}/>
         </Route>
         <Route exact path = "/createrecipe">
           <CreateRecipe />
