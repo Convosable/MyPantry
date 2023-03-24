@@ -14,9 +14,11 @@ function App() {
   const [myIngredientsList, setMyIngredientsList] = useState([])
   const [ingredientIsActive, setIngredientIsActive] = useState(false);
 
+  const [recipesList, setRecipesList] = useState([])
+
 
   const ingredientsData = `http://localhost:3000/ingredients`
-  // const recipesData = `http://localhost:3000/recipe`
+  const recipesData = `http://localhost:3000/recipes`
 
   useEffect(() => {
     fetch(ingredientsData)
@@ -29,6 +31,12 @@ function App() {
     })
   },[]);
 
+  useEffect(() => {
+    fetch(recipesData)
+    .then(r=>r.json())
+    .then(recipes => setRecipesList(recipes))
+  },[])
+
 
   function handleIngredientChange(ingredient) {
     if (myIngredientsList.includes(ingredient)){
@@ -37,11 +45,21 @@ function App() {
     } else {
       setMyIngredientsList([...myIngredientsList, ingredient])
     }
+    setIngredientIsActive((ingredientIsActive) => !ingredientIsActive)
   }
 
+  // still need to fix the add/remove button text to only apply to one paticular item as opposed to the entire list of ingr. on handleIngredientChange
+
   function handleAddIngredient(ingredient) {
-    setIngredientsList([...ingredientsList, ingredient])
+    const alreadyExists = ingredientsList.some(i => ingredient.name === i.name)
+    if (alreadyExists) {
+      alert("Ingredient already exists...")
+    } else {
+      setIngredientsList([...ingredientsList, ingredient])
+    }
   }
+
+  // still need to stop the ingriedient from being added to the list on handleAddIngredient (check the POST request)
 
   return (
     <div className="App">
@@ -51,10 +69,10 @@ function App() {
           <Home />
         </Route>
         <Route exact path = "/myrecipes">
-          <MyRecipes />
+          <MyRecipes recipesList = {recipesList}/>
         </Route>
         <Route exact path = "/mypantry">
-          <MyPantry myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} ingredientIsActive = {ingredientIsActive} handleAddIngredient = {handleAddIngredient}/>
+          <MyPantry ingredientIsActive = {ingredientIsActive} myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} ingredientIsActive = {ingredientIsActive} handleAddIngredient = {handleAddIngredient}/>
         </Route>
         <Route exact path = "/createrecipe">
           <CreateRecipe />

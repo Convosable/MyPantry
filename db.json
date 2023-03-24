@@ -4,6 +4,7 @@
       "id": 1,
       "name": "Sample Recipe",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqfjqVRVYG9qSR-Fb5F29Lr3TZYXp8KBgVA&usqp=CAU",
+      "type": "Italian",
       "preptime": "5 minutes",
       "cooktime": "10 minutes ",
       "ingredients": [
@@ -637,6 +638,41 @@
       "name": "Jackfruit",
       "category": "Fruit",
       "id": 127
+    },
+    {
+      "name": "Penne Pasta",
+      "category": "Grain",
+      "id": 128
+    },
+    {
+      "name": "Rotini Pasta",
+      "category": "Grain",
+      "id": 129
+    },
+    {
+      "name": "Spaghetti Pasta",
+      "category": "Grain",
+      "id": 130
+    },
+    {
+      "name": "Angel Hair Pasta",
+      "category": "Grain",
+      "id": 131
+    },
+    {
+      "name": "Lasagna Pasta",
+      "category": "Grain",
+      "id": 132
+    },
+    {
+      "name": "Trix Cereal",
+      "category": "Grain",
+      "id": 133
+    },
+    {
+      "name": "Cinnamon Toast Crunch Cereal",
+      "category": "Grain",
+      "id": 134
     }
   ]
 }

@@ -36,7 +36,7 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
         .then(newIngredient => handleAddIngredient(newIngredient))
         setFormData({
             name: "",
-            category: "Fruit"
+            category: formData.category
         });
     }
 
@@ -103,7 +103,7 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
                         </select>
                     </label>
                     {filterBySearch.map((ingredient) => 
-                    <IngredientCard ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange} ingredientIsActive = {ingredientIsActive}/>
+                    <IngredientCard ingredientIsActive = {ingredientIsActive} ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange}/>
                     )}
             </div>
             <div className = "myingredientcontainer">
@@ -111,7 +111,7 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
                 <input type="text" placeholder="search for ingredient"></input>
                 <div>
                     {myIngredientsList.map((ingredient) => 
-                    <IngredientCard ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange} ingredientIsActive = {ingredientIsActive}/>
+                    <IngredientCard ingredientIsActive = {ingredientIsActive} ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange}/>
                     )}
                 </div>
             </div>
