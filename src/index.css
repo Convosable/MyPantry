@@ -16,7 +16,9 @@ code {
   border-style: solid;
   margin-left: 5rem;
   margin-right: 5rem;
-  margin-top: .5rem
+  margin-top: .5rem;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .ingredientcontainer {
@@ -26,6 +28,8 @@ code {
   float: left;
   width: 46%;
   padding: 10px;
+  overflow-y: auto;
+  max-height: 600px;
 }
 
 .myingredientcontainer {
@@ -35,4 +39,6 @@ code {
   float: right;
   width: 46%;
   padding: 10px;
+  overflow-y: auto;
+  max-height: 600px;
 }

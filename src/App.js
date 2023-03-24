@@ -21,7 +21,12 @@ function App() {
   useEffect(() => {
     fetch(ingredientsData)
     .then(r=>r.json())
-    .then(ingredient => setIngredientsList(ingredient))
+    .then(ingredients => {
+      const abc = ingredients.sort(function(a,b) {
+        return a.name.localeCompare(b.name);
+      })
+      setIngredientsList(abc)
+    })
   },[]);
 
 

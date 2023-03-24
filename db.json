@@ -637,6 +637,11 @@
       "name": "Chia Seeds",
       "category": "Nuts/Seeds",
       "id": 126
+    },
+    {
+      "name": "Jackfruit",
+      "category": "Fruit",
+      "id": 127
     }
   ]
 }
