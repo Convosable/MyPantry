@@ -46,3 +46,16 @@ code {
   overflow-y: auto;
   max-height: 600px;
 }
+
+.recipecard {
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-style: solid;
+}
+
+.instructions {
+  text-align: left;
+  margin-left: 575px;
+}

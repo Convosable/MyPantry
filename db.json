@@ -10,7 +10,8 @@
       "ingredients": [
         "salt",
         "pepper"
-      ]
+      ],
+      "instructions": ["Do this.", "Do that.", "Done."]
     }
   ],
   "ingredients": [
