@@ -21,7 +21,7 @@ function RecipeDetail() {
     return (
         <div className = "recipecard">
             <h1>{name}</h1>
-            <img src = {image} alt = {name}/>
+            <img src = {image} alt = {name} height="300"/>
             <h2>{type}</h2>
             <p>Preptime: {preptime}</p>
             <p>Cooktime: {cooktime}</p>
