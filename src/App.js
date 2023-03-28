@@ -51,15 +51,21 @@ function App() {
 
   // still need to fix the add/remove button text to only apply to one paticular item as opposed to the entire list of ingr. on handleIngredientChange
 
+  // function handleAddIngredient(ingredient) {
+  //   const alreadyExists = ingredientsList.some(i => ingredient.name === i.name)
+  //   if (alreadyExists) {
+  //     alert("Ingredient already exists...")
+  //   } else {
+  //     setIngredientsList([...ingredientsList, ingredient])
+  //   }
+  // }
   function handleAddIngredient(ingredient) {
-    const alreadyExists = ingredientsList.some(i => ingredient.name === i.name)
-    if (alreadyExists) {
-      alert("Ingredient already exists...")
-    } else {
-      setIngredientsList([...ingredientsList, ingredient])
-    }
+    setIngredientsList([...ingredientsList, ingredient])
   }
 
+  function handleRecipeSubmit(recipe) {
+    setRecipesList([...recipesList, recipe])
+}
   // still need to stop the ingriedient from being added to the list on handleAddIngredient (check the POST request)
 
   return (
@@ -79,7 +85,7 @@ function App() {
           <MyPantry ingredientIsActive = {ingredientIsActive} myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} handleAddIngredient = {handleAddIngredient}/>
         </Route>
         <Route exact path = "/createrecipe">
-          <CreateRecipe />
+          <CreateRecipe handleRecipeSubmit = {handleRecipeSubmit}/>
         </Route>
       </Switch>
     </div>

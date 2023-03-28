@@ -11,7 +11,11 @@
         "salt",
         "pepper"
       ],
-      "instructions": ["Do this.", "Do that.", "Done."]
+      "instructions": [
+        "Do this.",
+        "Do that.",
+        "Done."
+      ]
     },
     {
       "id": 2,
@@ -24,7 +28,35 @@
         "salt",
         "pepper"
       ],
-      "instructions": ["Do this.", "Do that.", "Done."]
+      "instructions": [
+        "Do this.",
+        "Do that.",
+        "Done."
+      ]
+    },
+    {
+      "name": "French Toast",
+      "image": "https://www.simplyrecipes.com/thmb/b48moNCTtaUYEc1Qyxhe9V66XKc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-French-Toast-Lead-Shot-3b-c3a68a576a9548f5bd43cce3d2d7f4b7.jpg",
+      "type": "Breakfast",
+      "preptime": "5 minutes",
+      "cooktime": "5 minutes",
+      "ingredients": [
+        "White Bread",
+        " Cinnamon",
+        " Sugar",
+        " Eggs",
+        " Butter",
+        " Syrup",
+        " Powdered Sugar"
+      ],
+      "instructions": [
+        "Whisk 1 egg 1/4 cup milk 2 tbsp sugar and 1 tbsp cinnamon all together in a bowl.",
+        " Soak bread slice in egg mixture for a few seconds.",
+        " Place on preheated pan at medium heat.",
+        " Flip when side starts to brown.",
+        " Serve with butter syrup and powdered sugar."
+      ],
+      "id": 3
     }
   ],
   "ingredients": [

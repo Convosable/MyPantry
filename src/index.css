@@ -55,7 +55,11 @@ code {
   border-style: solid;
 }
 
-.instructions {
+.list {
   text-align: left;
-  margin-left: 575px;
+}
+
+.textarea {
+  height: 100px;
+  width: 800px;
 }

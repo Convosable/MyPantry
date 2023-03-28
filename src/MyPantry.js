@@ -25,19 +25,24 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
             name: formData.name,
             category: formData.category
         }
-        fetch(`http://localhost:3000/ingredients`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(ingredientData)
-        })
-        .then(r=>r.json())
-        .then(newIngredient => handleAddIngredient(newIngredient))
-        setFormData({
-            name: "",
-            category: formData.category
-        });
+        const alreadyExists = ingredientsList.some(i => e.target.value === i.name)
+        if (alreadyExists) {
+            alert("Ingredient already exists...")
+        } else {
+            fetch(`http://localhost:3000/ingredients`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(ingredientData)
+            })
+            .then(r=>r.json())
+            .then(newIngredient => handleAddIngredient(newIngredient))
+            setFormData({
+                name: "",
+                category: formData.category
+            });
+        }
     }
 
     function handleChange(e) {
