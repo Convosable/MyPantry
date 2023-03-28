@@ -82,6 +82,7 @@ function MyIngredients({ingredientsList, handleAddIngredient}) {
                             <option value="Legume">Legume</option>
                             <option value="Spice">Spice</option>
                             <option value="Nuts/Seeds">Nuts/Seeds</option>
+                            <option value="Condiments">Condiments</option>
                         </select>
                     </label>
                     <button type="submit">Submit</button>
@@ -102,6 +103,7 @@ function MyIngredients({ingredientsList, handleAddIngredient}) {
                             <option value="Legume">Legume</option>
                             <option value="Spice">Spice</option>
                             <option value="Nuts/Seeds">Nuts/Seeds</option>
+                            <option value="Condiments">Condiments</option>
                         </select>
                     </label>
                     {filterBySearch.map((ingredient) => 

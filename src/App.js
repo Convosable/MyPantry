@@ -12,7 +12,6 @@ import { Route, Switch } from "react-router-dom"
 function App() {
 
   const [ingredientsList, setIngredientsList] = useState([])
-  const [ingredientIsActive, setIngredientIsActive] = useState(false);
 
   const [recipesList, setRecipesList] = useState([])
 
@@ -68,7 +67,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path = "/myrecipes/:id">
-          <RecipeDetail ingredientIsActive = {ingredientIsActive} deleteRecipe = {deleteRecipe}/>
+          <RecipeDetail ingredientsList = {ingredientsList} deleteRecipe = {deleteRecipe}/>
         </Route>
         <Route exact path = "/myrecipes">
           <MyRecipes recipesList = {recipesList}/>

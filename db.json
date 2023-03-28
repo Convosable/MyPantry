@@ -8,19 +8,19 @@
       "cooktime": "5 minutes",
       "ingredients": [
         "White Bread",
-        " Cinnamon",
-        " Sugar",
-        " Eggs",
-        " Butter",
-        " Syrup",
-        " Powdered Sugar"
+        "Cinnamon",
+        "Sugar",
+        "Eggs",
+        "Butter",
+        "Syrup",
+        "Powdered Sugar"
       ],
       "instructions": [
         "Whisk 1 egg 1/4 cup milk 2 tbsp sugar and 1 tbsp cinnamon all together in a bowl.",
-        " Soak bread slice in egg mixture for a few seconds.",
-        " Place on preheated pan at medium heat.",
-        " Flip when side starts to brown.",
-        " Serve with butter syrup and powdered sugar."
+        "Soak bread slice in egg mixture for a few seconds.",
+        "Place on preheated pan at medium heat.",
+        "Flip when side starts to brown.",
+        "Serve with butter syrup and powdered sugar."
       ],
       "id": 3
     },
@@ -32,15 +32,34 @@
       "cooktime": "N/A",
       "ingredients": [
         "Sourdough Bread",
-        " Peanut Butter",
-        " Jelly"
+        "Peanut Butter",
+        "Jelly"
       ],
       "instructions": [
         "Spread peanut butter on one slice of bread.",
-        " Spread jelly on the other slice of bread.",
-        " Put the slices together."
+        "Spread jelly on the other slice of bread.",
+        "Put the slices together."
       ],
       "id": 4
+    },
+    {
+      "name": "test",
+      "image": "https://en.wikipedia.org/wiki/Forky#/media/File:Forky_waving.png",
+      "type": "Breakfast",
+      "preptime": "5 minutes",
+      "cooktime": "5 minutes",
+      "ingredients": [
+        "Beet",
+        "Couscous",
+        "Milk"
+      ],
+      "instructions": [
+        "adsasdasd",
+        "asdasdasd",
+        "asdasdasd",
+        "sd"
+      ],
+      "id": 5
     }
   ],
   "ingredients": [
@@ -708,6 +727,16 @@
       "name": "Red Lettuce",
       "category": "Vegetable",
       "id": 135
+    },
+    {
+      "name": "Sugar",
+      "category": "Spice",
+      "id": 136
+    },
+    {
+      "name": "Butter",
+      "category": "Condiments",
+      "id": 137
     }
   ]
 }

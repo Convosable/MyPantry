@@ -51,10 +51,10 @@ code {
   width: 800px;
 }
 
-.in-my-ingredients {
+.green {
   color:darkgreen;
 }
 
-.not-in-my-ingredients {
+.red {
   color:crimson;
 }

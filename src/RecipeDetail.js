@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams, useHistory } from "react-router-dom";
 
-function RecipeDetail({deleteRecipe, ingredientIsActive}) {
+function RecipeDetail({deleteRecipe, ingredientsList}) {
 
     const [recipe, setRecipe] = useState(null);
     const params = useParams();
@@ -19,7 +19,7 @@ function RecipeDetail({deleteRecipe, ingredientIsActive}) {
     const {id, name, image, type, preptime, cooktime, ingredients, instructions} = recipe;
 
     function editRecipe(e) {
-        history.push()
+        // history.push()
         // bring up the form with all the values filled in for the specific reicpe.
         console.log(e.target.value);
         // fetch(`http://localhost:3001/myrecipes/${recipe.id}`, {
@@ -41,6 +41,19 @@ function RecipeDetail({deleteRecipe, ingredientIsActive}) {
         history.push('/myrecipes')
     }
 
+    const ingredientNames = ingredientsList.map(ingr => ingr.name)
+
+
+    const allIngredients = ingredients.map((ingr) => { 
+        for (let i = 0; i < ingredients.length; i++) {
+            if (ingredientNames.includes(ingr)) {
+                return <li className = 'green'>{ingr}</li>
+            } else {
+                return <li className = 'red'>{ingr}</li>
+            }
+        }
+    })
+
 
     
     return (
@@ -50,7 +63,7 @@ function RecipeDetail({deleteRecipe, ingredientIsActive}) {
             <h2>{type}</h2>
             <p>Preptime: {preptime}</p>
             <p>Cooktime: {cooktime}</p>
-            <p>Ingredients: {ingredients.map((ingr) => <li className = {ingredientIsActive ? "in-my-ingredients" : "not-in-my-ingredients"}>{ingr}</li>)}</p>
+            <p>Ingredients: {allIngredients}</p>
             <div className = "instructions">
                 <p>Instructions:</p>
                 <ol className = "list" type="1">
