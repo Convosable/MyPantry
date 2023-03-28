@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
-function RecipeDetail() {
+function RecipeDetail({deleteRecipe}) {
 
     const [recipe, setRecipe] = useState(null);
     const params = useParams();
+
+    let history = useHistory();
 
     useEffect(() => {
         fetch(`http://localhost:3000/recipes/${params.id}`)
@@ -14,7 +16,30 @@ function RecipeDetail() {
 
     if (!recipe) return <h2>Loading...</h2>
 
-    const {name, image, type, preptime, cooktime, ingredients, instructions} = recipe;
+    const {id, name, image, type, preptime, cooktime, ingredients, instructions} = recipe;
+
+    function editRecipe(e) {
+        history.push()
+        // bring up the form with all the values filled in for the specific reicpe.
+        console.log(e.target.value);
+        // fetch(`http://localhost:3001/myrecipes/${recipe.id}`, {
+        //     method: "PATCH",
+        //     headers: {
+        //         "content-type": "application/json"
+        //     },
+        //     body: JSON.stringify()
+        // })
+        // .then(r => r.json())
+    }
+
+    function handleDelete() {
+        fetch(`http://localhost:3000/recipes/${recipe.id}`, {
+            method: "DELETE",
+        })
+        .then(r => r.json())
+        .then(() => deleteRecipe(recipe))
+        history.push('/myrecipes')
+    }
 
 
     
@@ -32,7 +57,8 @@ function RecipeDetail() {
                     {instructions.map((inst) => <li>{inst}</li>)}
                 </ol>
             </div>
-            <button>edit recipe</button>
+            <button onClick = {editRecipe}>edit recipe</button>
+            <button onClick = {handleDelete}>delete recipe</button>
         </div>
 
     )

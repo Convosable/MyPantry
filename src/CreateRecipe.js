@@ -12,7 +12,8 @@ function CreateRecipe({handleRecipeSubmit}) {
         instructions: []
     })
 
-    function createNewRecipe() {
+    function createNewRecipe(e) {
+        e.preventDefault()
         const newRecipe = {
             name: formData.name,
             image: formData.image,
@@ -30,7 +31,16 @@ function CreateRecipe({handleRecipeSubmit}) {
             body: JSON.stringify(newRecipe)
             })
             .then(r => r.json())
-            .then(data => handleRecipeSubmit(data))
+            .then(recipe => handleRecipeSubmit(recipe))
+            setFormData({
+                name: "",
+                image: "",
+                type: "",
+                preptime: "",
+                cooktime: "",
+                ingredients: [],
+                instructions: []
+            })
     }
 
     function handleChange(e) {
@@ -46,7 +56,6 @@ function CreateRecipe({handleRecipeSubmit}) {
             [e.target.name] : e.target.value.split(",")
         })
     }
-    
     
     return (
         <div>

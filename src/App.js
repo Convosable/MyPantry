@@ -68,6 +68,11 @@ function App() {
 }
   // still need to stop the ingriedient from being added to the list on handleAddIngredient (check the POST request)
 
+  function deleteRecipe(recipe) {
+    const deleted = recipesList.filter(rec => rec.id !== recipe.id)
+    setRecipesList(deleted)
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -76,7 +81,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path = "/myrecipes/:id">
-          <RecipeDetail />
+          <RecipeDetail deleteRecipe = {deleteRecipe}/>
         </Route>
         <Route exact path = "/myrecipes">
           <MyRecipes recipesList = {recipesList}/>
@@ -100,4 +105,5 @@ export default App;
     //MyPantry
     //MyRecipes
               //Recipe Card
+    //RecipeDetail
     //CreateRecipe

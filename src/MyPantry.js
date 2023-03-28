@@ -61,9 +61,6 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
     }
 
 
-
-
-    
     return (
         <div>
             <h1>My Pantry</h1>
