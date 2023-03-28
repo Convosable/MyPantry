@@ -4,7 +4,7 @@ import Home from './Home';
 import NavBar from './NavBar';
 import MyRecipes from './MyRecipes';
 import CreateRecipe from './CreateRecipe';
-import MyPantry from './MyPantry';
+import MyIngredients from './MyIngredients';
 import RecipeDetail from './RecipeDetail';
 import { Route, Switch } from "react-router-dom"
 
@@ -12,7 +12,6 @@ import { Route, Switch } from "react-router-dom"
 function App() {
 
   const [ingredientsList, setIngredientsList] = useState([])
-  const [myIngredientsList, setMyIngredientsList] = useState([])
   const [ingredientIsActive, setIngredientIsActive] = useState(false);
 
   const [recipesList, setRecipesList] = useState([])
@@ -38,19 +37,6 @@ function App() {
     .then(recipes => setRecipesList(recipes))
   },[])
 
-
-  function handleIngredientChange(ingredient) {
-    if (myIngredientsList.includes(ingredient)){
-      const removeIngredient = myIngredientsList.filter(i => i.id !== ingredient.id)
-      setMyIngredientsList(removeIngredient)
-    } else {
-      setMyIngredientsList([...myIngredientsList, ingredient])
-    }
-    setIngredientIsActive((ingredientIsActive) => !ingredientIsActive)
-  }
-
-  // still need to fix the add/remove button text to only apply to one paticular item as opposed to the entire list of ingr. on handleIngredientChange
-
   // function handleAddIngredient(ingredient) {
   //   const alreadyExists = ingredientsList.some(i => ingredient.name === i.name)
   //   if (alreadyExists) {
@@ -67,6 +53,7 @@ function App() {
     setRecipesList([...recipesList, recipe])
 }
   // still need to stop the ingriedient from being added to the list on handleAddIngredient (check the POST request)
+  // add delete ingredient button
 
   function deleteRecipe(recipe) {
     const deleted = recipesList.filter(rec => rec.id !== recipe.id)
@@ -81,13 +68,13 @@ function App() {
           <Home />
         </Route>
         <Route exact path = "/myrecipes/:id">
-          <RecipeDetail deleteRecipe = {deleteRecipe}/>
+          <RecipeDetail ingredientIsActive = {ingredientIsActive} deleteRecipe = {deleteRecipe}/>
         </Route>
         <Route exact path = "/myrecipes">
           <MyRecipes recipesList = {recipesList}/>
         </Route>
-        <Route exact path = "/mypantry">
-          <MyPantry ingredientIsActive = {ingredientIsActive} myIngredientsList = {myIngredientsList} handleIngredientChange = {handleIngredientChange} ingredientsList = {ingredientsList} handleAddIngredient = {handleAddIngredient}/>
+        <Route exact path = "/myingredients">
+          <MyIngredients ingredientsList = {ingredientsList} handleAddIngredient = {handleAddIngredient}/>
         </Route>
         <Route exact path = "/createrecipe">
           <CreateRecipe handleRecipeSubmit = {handleRecipeSubmit}/>

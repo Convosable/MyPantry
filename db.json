@@ -703,6 +703,11 @@
       "name": "Cinnamon Toast Crunch Cereal",
       "category": "Grain",
       "id": 134
+    },
+    {
+      "name": "Red Lettuce",
+      "category": "Vegetable",
+      "id": 135
     }
   ]
 }

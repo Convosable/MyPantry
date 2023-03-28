@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import IngredientCard from "./IngredientCard";
 
-function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, ingredientIsActive, handleAddIngredient}) {
+function MyIngredients({ingredientsList, handleAddIngredient}) {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -63,7 +63,7 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
 
     return (
         <div>
-            <h1>My Pantry</h1>
+            <h1>My Ingredients</h1>
             <div className = "ingredientcontainer">
                 <h2>All Ingredients</h2>
                 <p>Don't see the ingredient your looking for? Add your own here...</p>
@@ -105,24 +105,14 @@ function MyPantry({ingredientsList, myIngredientsList, handleIngredientChange, i
                         </select>
                     </label>
                     {filterBySearch.map((ingredient) => 
-                    <IngredientCard ingredientIsActive = {ingredientIsActive} ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange}/>
+                    <IngredientCard ingredient = {ingredient} key = {ingredient.name}/>
                     )}
             </div>
-            <div className = "myingredientcontainer">
-                <h2>My Ingredients</h2>
-                <input type="text" placeholder="search for ingredient"></input>
-                <div>
-                    {myIngredientsList.map((ingredient) => 
-                    <IngredientCard ingredientIsActive = {ingredientIsActive} ingredient = {ingredient} key = {ingredient.name} handleIngredientChange = {handleIngredientChange}/>
-                    )}
-                </div>
-            </div>
-
         </div>
     )
 }
 
-export default MyPantry;
+export default MyIngredients;
 
 
 //create an Ingredient Card component for styling purposes

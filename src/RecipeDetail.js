@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams, useHistory } from "react-router-dom";
 
-function RecipeDetail({deleteRecipe}) {
+function RecipeDetail({deleteRecipe, ingredientIsActive}) {
 
     const [recipe, setRecipe] = useState(null);
     const params = useParams();
@@ -50,7 +50,7 @@ function RecipeDetail({deleteRecipe}) {
             <h2>{type}</h2>
             <p>Preptime: {preptime}</p>
             <p>Cooktime: {cooktime}</p>
-            <p>Ingredients: {ingredients.map((ingr) => <li>{ingr}</li>)}</p>
+            <p>Ingredients: {ingredients.map((ingr) => <li className = {ingredientIsActive ? "in-my-ingredients" : "not-in-my-ingredients"}>{ingr}</li>)}</p>
             <div className = "instructions">
                 <p>Instructions:</p>
                 <ol className = "list" type="1">

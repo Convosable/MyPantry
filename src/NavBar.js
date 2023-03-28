@@ -7,7 +7,7 @@ function NavBar() {
         <div>
             <Link exact to = "/">Home</Link>
             <Link exact to = "/myrecipes">MyRecipes</Link>
-            <Link exact to = "/mypantry">MyPantry</Link>
+            <Link exact to = "/myingredients">MyIngredients</Link>
             <Link exact to = "/createrecipe">Create Recipe</Link>
         </div>
     )

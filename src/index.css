@@ -28,24 +28,11 @@ code {
   margin-left: 1rem;
   margin-right: .5rem;
   border-style: solid;
-  float: left;
-  width: 46%;
   padding: 10px;
   overflow-y: auto;
   max-height: 600px;
 }
 
-.myingredientcontainer {
-  border-radius: 5px;
-  margin-right: 1rem;
-  margin-left: .5rem;
-  border-style: solid;
-  float: right;
-  width: 46%;
-  padding: 10px;
-  overflow-y: auto;
-  max-height: 600px;
-}
 
 .recipecard {
   text-align: center;
@@ -62,4 +49,12 @@ code {
 .textarea {
   height: 100px;
   width: 800px;
+}
+
+.in-my-ingredients {
+  color:darkgreen;
+}
+
+.not-in-my-ingredients {
+  color:crimson;
 }
