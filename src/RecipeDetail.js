@@ -41,12 +41,12 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
         history.push('/myrecipes')
     }
 
-    const ingredientNames = ingredientsList.map(ingr => ingr.name)
+    const ingredientNames = ingredientsList.map(ingr => ingr.name.toLowerCase())
 
 
     const allIngredients = ingredients.map((ingr) => { 
         for (let i = 0; i < ingredients.length; i++) {
-            if (ingredientNames.includes(ingr)) {
+            if (ingredientNames.includes(ingr.toLowerCase())) {
                 return <li className = 'green'>{ingr}</li>
             } else {
                 return <li className = 'red'>{ingr}</li>

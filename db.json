@@ -43,21 +43,32 @@
       "id": 4
     },
     {
-      "name": "test",
-      "image": "https://en.wikipedia.org/wiki/Forky#/media/File:Forky_waving.png",
-      "type": "Breakfast",
-      "preptime": "5 minutes",
-      "cooktime": "5 minutes",
+      "name": "Shrimp Tacos",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/04/Shrimp-Tacos-main-1.jpg",
+      "type": "Mexican",
+      "preptime": "15 minutes",
+      "cooktime": "15 minutes",
       "ingredients": [
-        "Beet",
-        "Couscous",
-        "Milk"
+        "raw shrimp",
+        "coleslaw",
+        "avocado",
+        "cilantro",
+        "plain greek yogurt",
+        "olive oil",
+        "lime",
+        "corn tortillas",
+        "mayonnaise",
+        "paprika",
+        "salt",
+        "garlic powder"
       ],
       "instructions": [
-        "adsasdasd",
-        "asdasdasd",
-        "asdasdasd",
-        "sd"
+        "Remove the tails from the shrimp and place in a bowl - season with paprika salt and garlic powder.",
+        "Blend plain greek yogurt cilantro avocado and lime together to make the sauce.",
+        "Combine coleslaw and mayonnaise together for the coleslaw mixture.",
+        "Cook shrimp over med-high heat on a skillet with olive oil.",
+        "Put shrimp to the side and place tortillas down in the oiled skillet to create your taco shells.",
+        "Prepare the tacos with coleslaw mixture shrimp and avocado cilantro dressing sauce."
       ],
       "id": 5
     }

@@ -71,9 +71,9 @@ function CreateRecipe({handleRecipeSubmit}) {
                 <input onChange = {handleChange} type="text" name = "preptime" value = {formData.preptime}/><br></br>
                 <label>Cooktime: </label><br></br>
                 <input onChange = {handleChange} type="text" name = "cooktime" value = {formData.cooktime}/><br></br>
-                <label>Ingredients: separate each ingredient by a comma ( , )</label><br></br>
+                <label>Ingredients: separate each ingredient by a comma ( , ) and no spaces.</label><br></br>
                 <textarea className = "textarea"onChange = {handleChangeArray} type="text" name = "ingredients" value = {formData.ingredients}/><br></br>
-                <label>Instructions: separate each line of instructions by a comma ( , )</label><br></br>
+                <label>Instructions: separate each line of instructions by a comma ( , ) and no spaces. </label><br></br>
                 <textarea className = "textarea" onChange = {handleChangeArray} type="text" name = "instructions" value = {formData.instructions}/><br></br>
                 <input type="submit" value = "Add Recipe!"/>
             </form>
