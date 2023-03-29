@@ -67,7 +67,7 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
                     {instructions.map((inst) => <li>{inst}</li>)}
                 </ol>
             </div>
-            <Link to={`/myrecipes/${id}/editrecipe`}>Edit Recipe</Link>
+            <Link to={`/myrecipes/${id}/edit`}>Edit Recipe</Link>
             <button onClick = {handleDelete}>delete recipe</button>
         </div>
 

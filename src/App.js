@@ -45,7 +45,7 @@ function App() {
   //     setIngredientsList([...ingredientsList, ingredient])
   //   }
   // }
-  
+
   function handleAddIngredient(ingredient) {
     setIngredientsList([...ingredientsList, ingredient])
   }
@@ -61,6 +61,11 @@ function App() {
     setRecipesList(deleted)
   }
 
+  function handleDeleteIngredient(ingredient){
+    const deleted = ingredientsList.filter(ingr => ingr.id !== ingredient.id)
+    setIngredientsList(deleted)
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -68,7 +73,7 @@ function App() {
         <Route exact path = "/">
           <Home />
         </Route>
-        <Route exact path = "/myrecipes/:id/editrecipe">
+        <Route exact path = "/myrecipes/:id/edit">
           <EditRecipe />
         </Route>
         <Route exact path = "/myrecipes/:id">
@@ -78,7 +83,7 @@ function App() {
           <MyRecipes recipesList = {recipesList}/>
         </Route>
         <Route exact path = "/myingredients">
-          <MyIngredients ingredientsList = {ingredientsList} handleAddIngredient = {handleAddIngredient}/>
+          <MyIngredients handleDeleteIngredient = {handleDeleteIngredient} ingredientsList = {ingredientsList} handleAddIngredient = {handleAddIngredient}/>
         </Route>
         <Route exact path = "/createrecipe">
           <CreateRecipe handleRecipeSubmit = {handleRecipeSubmit}/>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import IngredientCard from "./IngredientCard";
 
-function MyIngredients({ingredientsList, handleAddIngredient}) {
+function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngredient}) {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -108,7 +108,7 @@ function MyIngredients({ingredientsList, handleAddIngredient}) {
                     </label>
                     <div className = 'each'>
                     {filterBySearch.map((ingredient) => 
-                    <IngredientCard ingredient = {ingredient} key = {ingredient.name}/>
+                    <IngredientCard handleDeleteIngredient = {handleDeleteIngredient} ingredient = {ingredient} key = {ingredient.name}/>
                     )}
                     </div>
             </div>

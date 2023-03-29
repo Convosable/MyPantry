@@ -6,6 +6,8 @@ function RecipeCard({recipe}) {
 
     const {name, image, type, id} = recipe;
 
+    //Recipe Card doesnt get updated when recipedetail patch request is made because there is no rerender
+
     return (
         <div className = "recipecard">
             <h1>{name}</h1>
