@@ -106,9 +106,11 @@ function MyIngredients({ingredientsList, handleAddIngredient}) {
                             <option value="Condiments">Condiments</option>
                         </select>
                     </label>
+                    <div className = 'each'>
                     {filterBySearch.map((ingredient) => 
                     <IngredientCard ingredient = {ingredient} key = {ingredient.name}/>
                     )}
+                    </div>
             </div>
         </div>
     )
