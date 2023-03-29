@@ -58,7 +58,7 @@ function CreateRecipe({handleRecipeSubmit}) {
     }
     
     return (
-        <div>
+        <div className= "createrecipe">
             <h1>Create a Recipe</h1>
             <form onSubmit = {createNewRecipe}>
                 <label>Name: </label><br></br>
@@ -81,7 +81,7 @@ function CreateRecipe({handleRecipeSubmit}) {
 
                 <label>Instructions: separate each line of instructions by a comma ( , ) and no spaces. </label><br></br>
                 <textarea className = "textarea" onChange = {handleChangeArray} type="text" name = "instructions" value = {formData.instructions}/><br></br>
-                
+
                 <input type="submit" value = "Add Recipe!"/>
             </form>
         </div>

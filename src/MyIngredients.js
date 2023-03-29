@@ -63,8 +63,9 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
 
     return (
         <div>
-            <h1>My Ingredients</h1>
+            <h1 className = "myingredientstitle" >My Ingredients</h1>
             <div className = "ingredientcontainer">
+                <div className = "myingredients">
                 <h2>All Ingredients</h2>
                 <p>Don't see the ingredient your looking for? Add your own here...</p>
                 <form onSubmit={handleSubmit}>
@@ -106,6 +107,7 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
                             <option value="Condiments">Condiments</option>
                         </select>
                     </label>
+                    </div>
                     <div className = 'each'>
                     {filterBySearch.map((ingredient) => 
                     <IngredientCard handleDeleteIngredient = {handleDeleteIngredient} ingredient = {ingredient} key = {ingredient.name}/>

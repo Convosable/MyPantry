@@ -18,17 +18,8 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
 
     const {id, name, image, type, preptime, cooktime, ingredients, instructions} = recipe;
 
-    function editRecipe(e) {
-        //edirect to form with all inputs filled in // history.push()
-        // update recipe button at the bottom with a patch request to see below
-        history.push('/')
-        
 
-        // bring up the form with all the values filled in for the specific reicpe.
-        console.log(e.target.value);
-        
-    }
-
+    
     function handleDelete() {
         fetch(`http://localhost:3000/recipes/${recipe.id}`, {
             method: "DELETE",
@@ -38,21 +29,20 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
         history.push('/myrecipes')
     }
 
-    const ingredientNames = ingredientsList.map(ingr => ingr.name.toLowerCase())
 
+
+    const ingredientNames = ingredientsList.map(ingr => ingr.name.toLowerCase())
 
     const allIngredients = ingredients.map((ingr) => { 
         for (let i = 0; i < ingredients.length; i++) {
             if (ingredientNames.includes(ingr.toLowerCase())) {
-                return <li className = 'green'>{ingr}</li>
+                return <li key = {ingr} className = 'green'>{ingr}</li>
             } else {
-                return <li className = 'red'>{ingr}</li>
+                return <li key = {ingr} className = 'red'>{ingr}</li>
             }
         }
     })
 
-
-    
     return (
         <div className = "recipecard">
             <h1>{name}</h1>
@@ -64,11 +54,11 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
             <div className = "instructions">
                 <p>Instructions:</p>
                 <ol className = "list" type="1">
-                    {instructions.map((inst) => <li>{inst}</li>)}
+                    {instructions.map((inst) => <li key = {inst} >{inst}</li>)}
                 </ol>
             </div>
             <Link to={`/myrecipes/${id}/edit`}>Edit Recipe</Link>
-            <button onClick = {handleDelete}>delete recipe</button>
+            <button onClick = {handleDelete}>Delete Recipe</button>
         </div>
 
     )

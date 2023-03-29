@@ -13,9 +13,7 @@ import { Route, Switch } from "react-router-dom"
 function App() {
 
   const [ingredientsList, setIngredientsList] = useState([])
-
   const [recipesList, setRecipesList] = useState([])
-
 
   const ingredientsData = `http://localhost:3000/ingredients`
   const recipesData = `http://localhost:3000/recipes`

@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("https://thumbs.dreamstime.com/b/asian-food-background-various-cooking-ingredients-rustic-background-top-view-banner-concept-chinese-thai-66582124.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 code {
@@ -21,13 +26,12 @@ code {
   column-gap: 1rem;
   align-items: center;
   border-radius: 10px;
+  background-color: ivory;
 }
 
 .ingredientcontainer {
-  border-radius: 5px;
   margin-left: 1rem;
   margin-right: .5rem;
-  border-style: solid;
   padding: 10px;
 }
 
@@ -35,9 +39,11 @@ code {
 .recipecard {
   text-align: center;
   border-radius: 5px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
   border-style: solid;
+  background-color: ivory;
+  margin-bottom: 10px;
 }
 
 .list {
@@ -45,7 +51,7 @@ code {
 }
 
 .textarea {
-  height: 100px;
+  height: 150px;
   width: 800px;
 }
 
@@ -60,4 +66,71 @@ code {
 .each  {
   overflow-y: auto;
   max-height: 390px;
+}
+
+.createrecipe {
+  background-color: ivory;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border-style: solid;
+  margin-bottom: 10px;
+
+}
+
+.recipetitle {
+  color: rgb(0, 0, 0);
+  font-size: 30pt;
+  background-color: ivory;
+  border-radius: 5px;
+  margin-left: 600px;
+  margin-right: 600px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+
+.myingredients {
+  color: rgb(0, 0, 0);
+  background-color: ivory;
+  border-radius: 5px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border-style: solid;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.myingredientstitle {
+  color: rgb(0, 0, 0);
+  background-color: ivory;
+  border-radius: 5px;
+  margin-left: 550px;
+  margin-right: 550px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+
+.home {
+  color: rgb(0, 0, 0);
+  background-color: ivory;
+  border-radius: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  font-size: 24px;
+  background-color:lightsalmon;
+  border-radius: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+
+span {
+  margin: 15px;
 }
