@@ -3,6 +3,8 @@ import RecipeCard from "./RecipeCard";
 
 function MyRecipes({recipesList}) {
 
+    // add a fliter by category and search by name
+    
     return (
         <div>
             <h1>Recipes</h1>

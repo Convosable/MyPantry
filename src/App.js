@@ -6,6 +6,7 @@ import MyRecipes from './MyRecipes';
 import CreateRecipe from './CreateRecipe';
 import MyIngredients from './MyIngredients';
 import RecipeDetail from './RecipeDetail';
+import EditRecipe from './EditRecipe';
 import { Route, Switch } from "react-router-dom"
 
 
@@ -65,6 +66,9 @@ function App() {
       <Switch>
         <Route exact path = "/">
           <Home />
+        </Route>
+        <Route exact path = "/myrecipes/:id/editrecipe">
+          <EditRecipe />
         </Route>
         <Route exact path = "/myrecipes/:id">
           <RecipeDetail ingredientsList = {ingredientsList} deleteRecipe = {deleteRecipe}/>

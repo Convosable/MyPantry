@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 
 function RecipeDetail({deleteRecipe, ingredientsList}) {
 
@@ -19,17 +19,14 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
     const {id, name, image, type, preptime, cooktime, ingredients, instructions} = recipe;
 
     function editRecipe(e) {
-        // history.push()
+        //edirect to form with all inputs filled in // history.push()
+        // update recipe button at the bottom with a patch request to see below
+        history.push('/')
+        
+
         // bring up the form with all the values filled in for the specific reicpe.
         console.log(e.target.value);
-        // fetch(`http://localhost:3001/myrecipes/${recipe.id}`, {
-        //     method: "PATCH",
-        //     headers: {
-        //         "content-type": "application/json"
-        //     },
-        //     body: JSON.stringify()
-        // })
-        // .then(r => r.json())
+        
     }
 
     function handleDelete() {
@@ -70,7 +67,7 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
                     {instructions.map((inst) => <li>{inst}</li>)}
                 </ol>
             </div>
-            <button onClick = {editRecipe}>edit recipe</button>
+            <Link to={`/myrecipes/${id}/editrecipe`}>Edit Recipe</Link>
             <button onClick = {handleDelete}>delete recipe</button>
         </div>
 
