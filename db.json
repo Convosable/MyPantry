@@ -435,11 +435,6 @@
       "id": 74
     },
     {
-      "name": "2% Milk",
-      "category": "Dairy",
-      "id": 75
-    },
-    {
       "name": "Fat Free Milk",
       "category": "Dairy",
       "id": 76
@@ -710,11 +705,6 @@
       "id": 130
     },
     {
-      "name": "Angel Hair Pasta",
-      "category": "Grain",
-      "id": 131
-    },
-    {
       "name": "Lasagna Pasta",
       "category": "Grain",
       "id": 132
@@ -743,6 +733,16 @@
       "name": "Butter",
       "category": "Condiments",
       "id": 137
+    },
+    {
+      "name": "White Bread",
+      "category": "Grain",
+      "id": 138
+    },
+    {
+      "name": "Ketchup",
+      "category": "Condiments",
+      "id": 139
     }
   ]
 }

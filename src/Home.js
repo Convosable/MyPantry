@@ -18,6 +18,8 @@ function Home() {
             <br></br>
             <br></br>
             <h3>Ingredients will show up in green for the ones you have and red for the ones you don't have on the recipe details page.</h3>
+            <br></br>
+            <br></br>
         </div>
     )
 }

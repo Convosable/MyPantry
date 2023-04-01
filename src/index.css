@@ -31,7 +31,7 @@ code {
 
 .ingredientcontainer {
   margin-left: 1rem;
-  margin-right: .5rem;
+  margin-right: .75rem;
   padding: 10px;
 }
 
@@ -65,7 +65,7 @@ code {
 
 .each  {
   overflow-y: auto;
-  max-height: 390px;
+  max-height: 350px;
 }
 
 .createrecipe {

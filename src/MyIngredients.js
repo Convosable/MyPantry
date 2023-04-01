@@ -25,7 +25,7 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
             name: formData.name,
             category: formData.category
         }
-        const alreadyExists = ingredientsList.some(i => e.target.value === i.name)
+        const alreadyExists = ingredientsList.some(i => formData.name === i.name)
         if (alreadyExists) {
             alert("Ingredient already exists...")
         } else {
