@@ -35,15 +35,6 @@ function App() {
     .then(recipes => setRecipesList(recipes))
   },[])
 
-  // function handleAddIngredient(ingredient) {
-  //   const alreadyExists = ingredientsList.some(i => ingredient.name === i.name)
-  //   if (alreadyExists) {
-  //     alert("Ingredient already exists...")
-  //   } else {
-  //     setIngredientsList([...ingredientsList, ingredient])
-  //   }
-  // }
-
   function handleAddIngredient(ingredient) {
     setIngredientsList([...ingredientsList, ingredient])
   }
@@ -51,8 +42,7 @@ function App() {
   function handleRecipeSubmit(recipe) {
     setRecipesList([...recipesList, recipe])
 }
-  // still need to stop the ingriedient from being added to the list on handleAddIngredient (check the POST request)
-  // add delete ingredient button
+ 
 
   function deleteRecipe(recipe) {
     const deleted = recipesList.filter(rec => rec.id !== recipe.id)

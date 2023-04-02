@@ -138,3 +138,14 @@ span {
 .active {
   color:red;
 }
+
+.recipesSearch {
+  color: rgb(0, 0, 0);
+  background-color: ivory;
+  border-radius: 5px;
+  margin-left: 350px;
+  margin-right: 350px;
+  border-style: solid;
+  margin-bottom: 10px;
+  padding: 5px;
+}
