@@ -3,10 +3,13 @@ import { useParams, useHistory, Link } from "react-router-dom";
 
 function RecipeDetail({deleteRecipe, ingredientsList}) {
 
-    const [recipe, setRecipe] = useState(null);
+    const [recipe, setRecipe] = useState('');
     const params = useParams();
 
     let history = useHistory();
+
+
+
 
     useEffect(() => {
         fetch(`http://localhost:3000/recipes/${params.id}`)
@@ -16,10 +19,14 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
 
     if (!recipe) return <h2>Loading...</h2>
 
+
+
+
     const {id, name, image, type, preptime, cooktime, ingredients, instructions} = recipe;
 
 
-    
+
+
     function handleDelete() {
         fetch(`http://localhost:3000/recipes/${recipe.id}`, {
             method: "DELETE",
@@ -28,6 +35,7 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
         .then(() => deleteRecipe(recipe))
         history.push('/myrecipes')
     }
+
 
 
 

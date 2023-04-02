@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 
 function CreateRecipe({handleRecipeSubmit}) {
 
@@ -11,6 +12,8 @@ function CreateRecipe({handleRecipeSubmit}) {
         ingredients: [],
         instructions: []
     })
+
+    const history = useHistory()
 
     function createNewRecipe(e) {
         e.preventDefault()
@@ -41,6 +44,7 @@ function CreateRecipe({handleRecipeSubmit}) {
                 ingredients: [],
                 instructions: []
             })
+            history.push('/myrecipes')
     }
 
     function handleChange(e) {

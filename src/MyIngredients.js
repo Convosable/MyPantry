@@ -10,6 +10,9 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
     const [search, setSearch] = useState('')
     const [filter, setFilter] = useState('All')
 
+
+
+
     const filterByCategory = ingredientsList.filter(i => {
         if(filter === 'All') {
             return i
@@ -18,6 +21,9 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
     })
 
     const filterBySearch = filterByCategory.filter(i => i.name.toLowerCase().includes(search.toLowerCase()))
+
+
+
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -45,6 +51,9 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
         }
     }
 
+
+
+    
     function handleChange(e) {
         setFormData({
             ...formData,
@@ -119,17 +128,3 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
 }
 
 export default MyIngredients;
-
-
-//create an Ingredient Card component for styling purposes
-
-// add a 'add to myIngredients' button, when active, places the ingredient into the myIngredients list
-
-
-// add a search bar input for both ingredients and my ingredients list 
-    //add state for search by for ingredients and myingredients
-            //  if input value === searchBy => filter ingredient list to show (search to startwith begining of any word) no submit button
-
-
-// add an input form for new ingredients to be added (fetch: post)
-

@@ -15,6 +15,9 @@ function App() {
   const [ingredientsList, setIngredientsList] = useState([])
   const [recipesList, setRecipesList] = useState([])
 
+
+
+
   const ingredientsData = `http://localhost:3000/ingredients`
   const recipesData = `http://localhost:3000/recipes`
 
@@ -35,13 +38,24 @@ function App() {
     .then(recipes => setRecipesList(recipes))
   },[])
 
+
+
+
   function handleAddIngredient(ingredient) {
     setIngredientsList([...ingredientsList, ingredient])
   }
 
+  function handleDeleteIngredient(ingredient){
+    const deleted = ingredientsList.filter(ingr => ingr.id !== ingredient.id)
+    setIngredientsList(deleted)
+  }
+
+
+
+
   function handleRecipeSubmit(recipe) {
     setRecipesList([...recipesList, recipe])
-}
+  }
  
 
   function deleteRecipe(recipe) {
@@ -49,10 +63,6 @@ function App() {
     setRecipesList(deleted)
   }
 
-  function handleDeleteIngredient(ingredient){
-    const deleted = ingredientsList.filter(ingr => ingr.id !== ingredient.id)
-    setIngredientsList(deleted)
-  }
 
   return (
     <div className="App">

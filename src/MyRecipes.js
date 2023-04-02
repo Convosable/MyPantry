@@ -3,7 +3,6 @@ import RecipeCard from "./RecipeCard";
 
 function MyRecipes({recipesList}) {
 
-    // add a fliter by category and search by name
     const [search, setSearch] = useState("")
     const [filter, setFilter] = useState("All")
 
@@ -22,7 +21,7 @@ function MyRecipes({recipesList}) {
             return r.type === filter}
     })
 
-    const filterBySearch = filterByType.filter(r => r.name.toLowerCase().includes(search.toLowerCase()))
+    const filterBySearch = filterByType.filter(r => r.name.toLowerCase().startsWith(search.toLowerCase()))
 
     return (
         <div>
