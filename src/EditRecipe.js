@@ -14,8 +14,11 @@ function EditRecipe() {
         instructions: []
     })
 
+
     const params = useParams();
     const history = useHistory();
+
+
 
     useEffect(() => {
         fetch(`http://localhost:3000/recipes/${params.id}`)
@@ -23,7 +26,9 @@ function EditRecipe() {
         .then(data => setFormData(data))
     }, [params.id])
 
+
     const {name, image, type, preptime, cooktime, ingredients, instructions} = formData;
+
 
     function handleChange(e) {
         setFormData({
@@ -39,6 +44,9 @@ function EditRecipe() {
         })
     }
 
+
+
+    
     function updateRecipe(e) {
         e.preventDefault();
         const update = {

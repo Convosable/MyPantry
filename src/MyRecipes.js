@@ -6,6 +6,9 @@ function MyRecipes({recipesList}) {
     const [search, setSearch] = useState("")
     const [filter, setFilter] = useState("All")
 
+
+
+
     function handleChange(e) {
         setSearch(e.target.value)
     }
@@ -14,6 +17,9 @@ function MyRecipes({recipesList}) {
         setFilter(e.target.value)
     }
 
+
+
+    
     const filterByType = recipesList.filter(r => {
         if(filter === 'All') {
             return r

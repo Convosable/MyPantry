@@ -2,8 +2,6 @@
 
 Homemade Cookbook is an application that allows the user to create and save their own recipes for later use.
 
-## Usage
-
 When the application loads, you can go to NavBar to access different components depending on what the user wants to accomplish.
 
 In the "My Ingredients" component, enter all the ingredietns you currently have on hand. This allows you to see which ingriedients are available to you already when looking at a certain recipe. The user can filter through the ingredients by using the 'search by name input' or the 'category filter' input.
@@ -14,7 +12,20 @@ In the My Recipes component, you will see a simple preveiw of each recipe you ha
 
 When viewing the detailed recipe, you can make adjustments to the recipe by clicking the 'edit recipe' link.
 
-Enjoy creating your own, on hand, cookbook.
+## Usage
+
+To prepare the app:
+
+### `json-server --watch db.json --port 3000`
+
+Starts up the db.json file acting as an api.
+
+### `npm start`
+
+Runs the app in the development mode.
+Open http://localhost:3001 to view it in your browser.
+
+Enjoy!
 
 
 ## Future Updates

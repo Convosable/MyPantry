@@ -4,8 +4,8 @@ import { useParams, useHistory, Link } from "react-router-dom";
 function RecipeDetail({deleteRecipe, ingredientsList}) {
 
     const [recipe, setRecipe] = useState('');
+    
     const params = useParams();
-
     let history = useHistory();
 
 
@@ -38,7 +38,7 @@ function RecipeDetail({deleteRecipe, ingredientsList}) {
 
 
 
-
+    // bad practice for frontend 
     const ingredientNames = ingredientsList.map(ingr => ingr.name.toLowerCase())
 
     const allIngredients = ingredients.map((ingr) => { 

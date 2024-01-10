@@ -97,9 +97,10 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
                     </label>
                     <button type="submit">Submit</button>
                 </form>
+                
                 <p>Search all ingredients...</p>
                 <label>Search by Name:
-                    <input onChange = {handleSearch} type="text" placeholder="ingredient name" value = {search}></input>
+                    <input onChange = {handleSearch} type="text" name = 'name' placeholder="ingredient name" value = {search}></input>
                 </label>
                 <label>Filter by Category:
                         <select onChange = {handleFilter} name="category" value = {filter}>
@@ -119,7 +120,7 @@ function MyIngredients({ingredientsList, handleAddIngredient, handleDeleteIngred
                     </div>
                     <div className = 'each'>
                     {filterBySearch.map((ingredient) => 
-                    <IngredientCard handleDeleteIngredient = {handleDeleteIngredient} ingredient = {ingredient} key = {ingredient.name}/>
+                    <IngredientCard handleDeleteIngredient = {handleDeleteIngredient} ingredient = {ingredient} key = {ingredient.id}/>
                     )}
                     </div>
             </div>

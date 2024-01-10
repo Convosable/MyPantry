@@ -65,7 +65,7 @@ code {
 
 .each  {
   overflow-y: auto;
-  max-height: 350px;
+  max-height: 620px;
 }
 
 .createrecipe {

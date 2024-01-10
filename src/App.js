@@ -15,9 +15,6 @@ function App() {
   const [ingredientsList, setIngredientsList] = useState([])
   const [recipesList, setRecipesList] = useState([])
 
-
-
-
   const ingredientsData = `http://localhost:3000/ingredients`
   const recipesData = `http://localhost:3000/recipes`
 
@@ -30,6 +27,7 @@ function App() {
       })
       setIngredientsList(abc)
     })
+    
   },[]);
 
   useEffect(() => {
@@ -37,9 +35,6 @@ function App() {
     .then(r=>r.json())
     .then(recipes => setRecipesList(recipes))
   },[])
-
-
-
 
   function handleAddIngredient(ingredient) {
     setIngredientsList([...ingredientsList, ingredient])
@@ -49,9 +44,6 @@ function App() {
     const deleted = ingredientsList.filter(ingr => ingr.id !== ingredient.id)
     setIngredientsList(deleted)
   }
-
-
-
 
   function handleRecipeSubmit(recipe) {
     setRecipesList([...recipesList, recipe])
@@ -92,12 +84,3 @@ function App() {
 }
 
 export default App;
-
-//App
-    //Home
-    //NavBar
-    //MyPantry
-    //MyRecipes
-              //Recipe Card
-    //RecipeDetail
-    //CreateRecipe
