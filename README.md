@@ -1,6 +1,6 @@
-# Homemade Cookbook
+# MyPantry
 
-Homemade Cookbook is an application that allows the user to create and save their own recipes for later use.
+MyPantry is an application that allows the user to create and save their own recipes for later use.
 
 When the application loads, you can go to NavBar to access different components depending on what the user wants to accomplish.
 

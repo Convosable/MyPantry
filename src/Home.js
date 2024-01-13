@@ -4,7 +4,7 @@ function Home() {
 
     return (
         <div className = "home">
-            <h1>Homemade Cookbook</h1>
+            <h1>MyPantry</h1>
             <br></br>
             <br></br>
             <br></br>
