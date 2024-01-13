@@ -55,6 +55,11 @@ function App() {
     setRecipesList(deleted)
   }
 
+  function handleUpdateRecipe(recipe) {
+    const updatedRecipe = recipesList.map(rec => (rec.id === recipe.id ? recipe : rec));
+    setRecipesList(updatedRecipe)
+  }
+
 
   return (
     <div className="App">
@@ -64,7 +69,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path = "/myrecipes/:id/edit">
-          <EditRecipe />
+          <EditRecipe handleUpdateRecipe = {handleUpdateRecipe}/>
         </Route>
         <Route exact path = "/myrecipes/:id">
           <RecipeDetail ingredientsList = {ingredientsList} deleteRecipe = {deleteRecipe}/>

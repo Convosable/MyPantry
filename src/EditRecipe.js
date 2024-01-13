@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useParams, useHistory } from "react-router-dom";
 
 
-function EditRecipe() {
+function EditRecipe( {handleUpdateRecipe} ) {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -66,6 +66,7 @@ function EditRecipe() {
             body: JSON.stringify(update)
         })
         .then(r => r.json())
+        .then(recipe => handleUpdateRecipe(recipe))
         history.push(`/myrecipes/${params.id}`)
     }
 

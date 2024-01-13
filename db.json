@@ -18,8 +18,7 @@
         "mayonnaise",
         "paprika",
         "salt",
-        "garlic powder",
-        "saltyyyyy"
+        "garlic powder"
       ],
       "instructions": [
         "Remove the tails from the shrimp and place in a bowl - season with paprika salt and garlic powder.",
@@ -390,11 +389,6 @@
       "id": 71
     },
     {
-      "name": "Almond Milk",
-      "category": "Dairy",
-      "id": 72
-    },
-    {
       "name": "Soy Milk",
       "category": "Dairy",
       "id": 73
@@ -723,6 +717,11 @@
       "name": "Mustard",
       "category": "Condiments",
       "id": 141
+    },
+    {
+      "name": "Almond Milk",
+      "category": "Dairy",
+      "id": 142
     }
   ]
 }
